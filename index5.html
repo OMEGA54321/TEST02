@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULARIOS EN HTML</h1>
+    <form action="mi_servidor" target="_blank">
+        <fieldset>
+            <legend>Datos:</legend>
+            <label for="idEmpleado">Num. Empleado</label>
+            <input type="text" id="idEmpleado" name="idEmpleado" disabled="true" value="244645"/>
+            <br>
+            <input type="hidden" id="sistema" name="sistema" value="SAP"/>
+            <br>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre"
+        name="nombre" required="true"/>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" placeholder="Escribe tu apellido"
+        name="nombre" required="true"/>
+        <br>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Agrega una contraseña"
+        name="password" required="true"
+        pattern="[A-Za-z0-9]{5,10}"title="Letras y numeros. Tamaño minimo 5. Tamaño maximo 10"/>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Agregar una cuenta de correo electronico"
+        name="email" required="true"/>
+        <br>
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="Edad"
+        name="edad" required="true" min="0" max="100" minlegth="1" maxlength="3"/>
+        <br>
+        <label> Genero: </label>
+        <br>
+        <input type="radio" id="femenino" name="genero" value="femenino"/>
+        <label for="femenino">Femenino</label>
+        <br>
+        <input type="radio" id="masculino" name="genero" value="masculino"/>
+        <label for="masculino">Masculino</label>
+        <br>
+        <label> Temas de interes: </label>
+        <br>
+        <input type="checkbox" id="html" name="Temas_interes" value="html"/>
+        <label for="html">HTML</label>
+        <br>
+        <input type="checkbox" id="JavaScript" name="Temas_interes" value="JavaScript"/>
+        <label for="JavaScript">JavaScript</label>
+        <br>
+        <input type="checkbox" id="CCS" name="Temas_interes" value="CCS"/>
+        <label for="CCS">CCS</label>
+        <br>
+        <input type="checkbox" id="Bootstrap" name="Temas_interes" value="Bootstrap"/>
+        <label for="Bootstrap">Bootstrap</label>
+        <br>
+        <label> Nivel Academico: </label>
+        <br>
+        <select id="nivel-academico" name="nivel_academico" multiple="true">
+            <option value="Primaria">Primaria</option>
+            <option value="Secundaria">Secundaria</option>
+            <option value="Preparatoria">Preparatoria</option>
+            <option value="Universidad" selected="true">Universidad</option>
+            <option value="Maestria">Maestria</option>
+        </select>
+        <br>
+        <label for="comentario">Comentario:</label>
+        <br>
+        <textarea id="comentario" name="comentario" rows="2" cols="30"></textarea>
+        <br>
+        <input type="submit" value="guardar"/>
+        <input type="submit" formnovalidate="formnovalidete" value="Enviar sin validar"
+        <input type="reset" value="Restablecer"
+    </fieldset>
+    </form>
+</body>
+</html>
